@@ -318,15 +318,25 @@ input[type="submit"]:hover {
   top: 90%;
   transform: translateY(-50%);
   background-color: white;
-  color: black;
-  padding: 10px 20px;
+  color: black;  padding: 10px 20px;
   border-radius: 10px;
   font-size: 18px;
   font-family: 'Outfit', sans-serif;
   border: 3px solid black;
-    transition: transform 1s ease; /* Agrega la propiedad de transición */
-
+  animation: animacion 2s infinite alternate;
 }
+
+@keyframes animacion {
+        0% {
+            transform: scale(1); /* Tamaño normal */
+        }
+        50% {
+            transform: scale(1.1); /* Agranda un poco */
+        }
+        100% {
+            transform: scale(1); /* Vuelve al tamaño normal */
+        }
+    }
 
 #inscripciones.hidden {
   transform: translateX(100%);
@@ -518,6 +528,24 @@ h2 {
  font-size: 25px;
 text-align: center;
  align-items: center;
+}
+
+#inscripciones {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  top: 90%;
+  width: 200px;
+  transform: translateY(-50%);
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-family: 'Outfit', sans-serif;
+  border: 3px solid black;
+  transition: transform 1s ease; /* Agrega la propiedad de transición */
+  font-size: 12px;
 }
 
 }
